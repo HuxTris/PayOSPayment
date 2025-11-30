@@ -2,6 +2,13 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
+// Nạp biến môi trường ngay tại đây
+require('dotenv').config();
+
+// In ra để kiểm tra ngay khi khởi động
+console.log('[APP START] PAYOS_CLIENT_ID:', process.env.PAYOS_CLIENT_ID);
+
 const paymentRoutes = require('./payment.route');
 
 const app = express();
